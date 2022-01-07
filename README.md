@@ -1,5 +1,6 @@
 # Movies-app
 Movies Hub
+(If you wish to look all the code you need look at is in Controllers, Models, Views, and startup.cs)
 
 --This is a movies app project made with ASP.Net Core. <br/>
 --Users can either be: Anonymous, User, or Manager <br/><br/>
@@ -17,3 +18,7 @@ Movies Hub
   --Perform CRUD operations on Movie Database, Users Database, and UserMovies Database <br/>
   --They can search for a specific User by UserName <br/>
   --They can search the MovieID to get the movie Details
+
+--I implemented the DB Models and Contexts. <br />
+--I create the DB with commands and packages installed <br />
+--I configured the configure services area in the startup.cs file as well <br />
