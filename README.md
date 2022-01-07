@@ -1,6 +1,6 @@
 # Movies-app
-Movies Hub
-(If you wish to look all the code you need look at is in Controllers, Models, Views, and startup.cs)
+Movies Hub <br />
+(If you wish to have a look, all the code you need look at is in Controllers, Models, Views, and startup.cs)
 
 --This is a movies app project made with ASP.Net Core. <br/>
 --Users can either be: Anonymous, User, or Manager <br/><br/>
