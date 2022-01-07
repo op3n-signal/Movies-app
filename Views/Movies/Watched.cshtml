@@ -1,0 +1,60 @@
+﻿@model IEnumerable<L08HandsOn.Models.Movie>
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+
+<h1>You have seen these Films already!</h1>
+
+<a asp-action="Index" class="btn btn-dark">back to list</a><br /> <br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                Details
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimesWatched)
+            </th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimesWatched)
+                </td>
+
+                @*@if ((await AuthorizationService.AuthorizeAsync(User, "Manager")).Succeeded)
+                    {
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    }*@
+
+                @if ((await AuthorizationService.AuthorizeAsync(User, "Admin")).Succeeded)
+                {
+                    <td>
+                        <a asp-action="Watch" asp-route-id="@item.Id" style="background-color: red; color: white; padding: 5px;">Watch</a>
+                    </td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>

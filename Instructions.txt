@@ -1,0 +1,12 @@
+﻿Manager can perform CRUD operations on the movies DB... DONE
+--managers can perform crud operations on the movies watched DB...DONE
+--fix the timewatched to be accurate for each user... DONE
+--add a search method to look up the movie ID or search by username
+
+anonymous users can only see the list of movies and they can register (there will still be a login button on the home page)... DONE
+
+users can log in and log out... DONE
+user can watch movies... DONE
+users should have a button to list movies they already watched...DONE
+make a database for users and movies they watched... Done
+when users click watch, the times watched will increment it will say you are watching this movie ...Done
